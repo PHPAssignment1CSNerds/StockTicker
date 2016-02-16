@@ -16,25 +16,38 @@ if (!defined('APPPATH'))
         <title>{title}</title>
         <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-        <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+        <link rel="stylesheet" type ="text/css" href="../assets/css/style.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+        crossorigin="anonymous"></link>
     </head>
     <body>
-        <div class="container">
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <a class="brand" href="/"><img src="/assets/images/logo.png"/></a>
-                    {menubar} </div>
-            </div>           
+        <div class="container">   
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                        </button>
+                        <a class="navbar-brand" href="#">Menu</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="/index.php">Home</a></li>
+                        <li><a href="/stockhistory">History</a></li>
+                        <li><a href="#">Portfolio</a></li> 
+                    </ul>                  
+                </div>
+            </nav>
             <div id="content">
-                <h1>{title}</h1>
+                <div class="jumbotron">
+                    <h1>{title}</h1>
+                </div>               
                 {content}
             </div>
-            <div id="footer" class="span12">
-                Copyright &copy; 2015-2016,  <a href="mailto:someone@somewhere.com">Me</a>.
-            </div>
+            
         </div>
-        <script src="/assets/js/jquery-1.11.1.min.js"></script>
-        <script src="/assets/js/bootstrap.min.js"></script>
+        
     </body>
 </html>

@@ -23,7 +23,7 @@ class Application extends CI_Controller {
 	{
 		parent::__construct();
 		$this->data = array();
-		$this->data['title'] = 'Quotes CMS';	// our default title
+		$this->data['title'] = 'Stock Ticker';	// our default title
 		$this->errors = array();
 		$this->data['pageTitle'] = 'welcome';   // our default page
 	}
@@ -33,11 +33,11 @@ class Application extends CI_Controller {
 	 */
 	function render()
 	{
-		$this->data['menubar'] = $this->parser->parse('_menubar', $this->config->item('menu_choices'), true);
+		
 		$this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
 
 		// finally, build the browser page!
-		$this->data['data'] = &$this->data;
+		$this->data['data'] = $this->data;
 		$this->parser->parse('_template', $this->data);
 	}
 
