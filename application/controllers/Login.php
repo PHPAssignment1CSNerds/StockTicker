@@ -19,7 +19,6 @@ class Login extends Application {
 
     function index()
     {
-        session_start();
         $this->data['pagebody'] = 'login';	// this is the view we want shown
         // build the list of authors, to pass on to our view
 

@@ -13,6 +13,7 @@ class Welcome extends Application {
 	function __construct()
 	{
 		parent::__construct();
+                $this->load->model('stock_model');
 	}
 
 	//-------------------------------------------------------------
@@ -22,14 +23,17 @@ class Welcome extends Application {
 	function index()
 	{
 
-		if ($_POST['username'] != null) {
-
-			$_SESSION["username"] = $_POST['username'];
-		}
-
+		if (!isset($_POST['username'])) 
+                {
+                    $this->data['username'] = $this->session->userdata('username');
+		}else{
+                    $this->session->set_userdata('username', $_POST['username']);
+                }
+                $this->data['stock_array'] = $this->stock_model->get_stocks();
+                $this->data['player_array'] = $this->stock_model->get_players();
 
 		$this->data['pagebody'] = 'homepage';	// this is the view we want shown
-		$this->data['username'] = $_SESSION['username'];
+		
 		// build the list of authors, to pass on to our view
 		
 		$this->render();

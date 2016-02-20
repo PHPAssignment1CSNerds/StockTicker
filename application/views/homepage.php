@@ -1,15 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Stock Exchange</title>
-    </head>
-        <body>          
-            <div class = "box">
-                <a href="/stockhistory"> stock history stuff </a>
-            </div> 
-            <div class= "box">
-                <p> from the other side </p>
-            </div>
-        </body>
-</html>
+<div class = "row">
+    <div class="panel1 panel-primary col-md-6">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Stocks</div>
+        <div class="panel-body">
+            <!--table-->
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Current Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {stock_array}
+                    <tr>
+                        <td><a href="/stockhistory/stock/{Code}">{Name}</a></td>
+                        <td>{Value}</td>
+                    </tr>
+                    {/stock_array}
+                </tbody>
+            </table>
+            <!--end of table-->
+        </div>
+    </div>
+    <div class="panel2 panel-primary col-md-6">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Players</div>
+        <div class="panel-body">
+            <!--table-->
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Name</th>                        
+                        <th>Cash</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {player_array}
+                    <tr>
+                        <td><a href="/playerprofile/player/{Player}">{Player}</a></td>
+                        <td>{Cash}</td>                       
+                    </tr>
+                    {/player_array}
+                </tbody>
+            </table>
+            <!--end of table-->
+        </div>
+    </div>             
+</div> 

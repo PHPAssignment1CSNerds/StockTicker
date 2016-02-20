@@ -26,6 +26,7 @@ class Application extends CI_Controller {
 		$this->data['title'] = 'Stock Ticker';	// our default title
 		$this->errors = array();
 		$this->data['pageTitle'] = 'welcome';   // our default page
+		$this->load->library('session');
 	}
 
 	/**
@@ -35,7 +36,7 @@ class Application extends CI_Controller {
 	{
 		
 		$this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
-
+                $this->data['user'] = $this->session->userdata('username');
 		// finally, build the browser page!
 		$this->data['data'] = $this->data;
 		$this->parser->parse('_template', $this->data);
