@@ -1,15 +1,13 @@
-<form role="form" action="/welcome" method="post">
-    <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" class="form-control" id="username" name="username">
-    </div>
-    <div class="form-group">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd">
-    </div>
-    <div class="checkbox">
-        <label><input type="checkbox"> Remember me</label>
-    </div>
-    <br/>
-    <button type="submit" value="Submit" class="btn btn-primary">Login</button>
+<form name="login" method="post" action="/Login/submit">
+    PlayerID: <input type="text" name="userid"></input><br/>
+    Password: <input type="text" name="password"></input><br/>
+    <input type="submit">Submit</input>
+</form>
+
+<hr/>
+
+<form name ="signup" method="post" action ="/Login/signup">
+    ID: <input type="text" name="userid"></input><br/>
+    Password: <input type="text" name="password"></input><br/>
+    <input type="submit">Submit</input>
 </form>
