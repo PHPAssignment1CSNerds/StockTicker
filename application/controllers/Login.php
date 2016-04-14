@@ -24,9 +24,10 @@ class Login extends Application {
         $key = $_POST['userid'];
         $user = $this->members->get_user($key);
         $password = $_POST['password'];
-        if(password_verify($password, $user->password)){
-            $this->session->set_userdata('userID', $user->name);
-            $this->session->set_userdata('userName', $user->name);
+        $retrieved = $user[0]['password'];
+        if(strcmp($password, $retrieved) == 0){
+            $this->session->set_userdata('userID', $user[0]['name']);
+            $this->session->set_userdata('userName', $user[0]['name']);
             //$this->session->set_userdata('userRole', $user->role);
             //redirect('stockticker.local:4710/Welcome');  
         }else{
@@ -37,7 +38,7 @@ class Login extends Application {
     
     function signup(){
         $name = $_POST['userid'];
-        $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
+        $password = $_POST['password'];
         $this->members->insert_into_members($name, $password);
         //redirect("stockticker.local:4710/Login");
     }

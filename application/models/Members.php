@@ -13,7 +13,7 @@ class Members extends CI_Model {
   }
   
   function get_user($name) {
-        $sql_movement = "SELECT password FROM members WHERE name= ?;";
+        $sql_movement = "SELECT * FROM members WHERE name= ?;";
         $query = $this->db->query($sql_movement, array($name));
         return $query->result_array();
     }
