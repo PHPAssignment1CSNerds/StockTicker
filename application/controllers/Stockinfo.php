@@ -21,7 +21,7 @@ Class Stock_info extends Application {
         //var_dump($this->stock_model->get_stocks());
 
         $this->data['stock_array'] = $this->stock_model->get_stocks();
-        
+
         //return the data in view  
         $this->data['pagebody'] = 'stockview'; // this is the view we want shown
 

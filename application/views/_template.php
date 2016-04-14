@@ -1,6 +1,6 @@
 <?php
 if (!defined('APPPATH'))
-	exit('No direct script access allowed');
+    exit('No direct script access allowed');
 /**
  * views/template.php
  *
@@ -18,8 +18,8 @@ if (!defined('APPPATH'))
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" type ="text/css" href="../assets/css/style.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
-        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
-        crossorigin="anonymous"></link>
+              integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+              crossorigin="anonymous"></link>
     </head>
     <body>
         <div class="container">   
@@ -27,20 +27,20 @@ if (!defined('APPPATH'))
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" 
-                            data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span> 
+                                data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span> 
                         </button>
                         <a class="navbar-brand">Stock Ticker</a>
                     </div>
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="/welcome">
-                            <span class="glyphicon glyphicon-home"></span> Home</a></li>
+                                <span class="glyphicon glyphicon-home"></span> Home</a></li>
                         <li><a href="/stockhistory">
-                            <span class="glyphicon glyphicon-blackboard"></span> History</a></li>
+                                <span class="glyphicon glyphicon-blackboard"></span> History</a></li>
                         <li><a href="/playerprofile">
-                            <span class="glyphicon glyphicon-user"></span> Portfolio</a></li>
+                                <span class="glyphicon glyphicon-user"></span> Portfolio</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/login"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
@@ -54,6 +54,6 @@ if (!defined('APPPATH'))
                 {content}
             </div>           
         </div>
-        
+
     </body>
 </html>
