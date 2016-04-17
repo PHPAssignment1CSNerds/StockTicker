@@ -37,7 +37,7 @@ $config['menu_choices2'] = array(
   | path to your installation.
   |
  */
-$config['base_url'] = 'http://stock.local:4711/index.php';
+$config['base_url'] = 'http://stock.local:4711/';
 
 /*
   |--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ $config['index_page'] = '';
   | 'ORIG_PATH_INFO'	Uses the ORIG_PATH_INFO
   |
  */
-$config['uri_protocol'] = 'AUTO';
+$config['uri_protocol'] = "AUTO" ;
 
 /*
   |--------------------------------------------------------------------------

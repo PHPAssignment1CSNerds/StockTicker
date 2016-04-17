@@ -1,3 +1,3 @@
 <p>{message}. Token is: {token}</p>
 
-<a href="/index.php/gameplay">Go back</a>
+<a href="/gameplay">Go back</a>
