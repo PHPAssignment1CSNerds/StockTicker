@@ -1,7 +1,7 @@
 <h1>{player}</h1>
 <hr size=4>
 
-<form class="form-inline" role="form" method="post" action="/index.php/playerprofile">
+<form class="form-inline" role="form" method="post" action="/playerprofile">
     <div class="form-group">
         <label for="email">&nbsp;&nbsp; Player:</label> &nbsp;&nbsp;
         <select name="player" class="form-control" id="sel1">

@@ -2,7 +2,7 @@
 
 <hr/>
 <h3>Re-downloading the data will take some time.</h3>
-<form name ="redownload" method="post" action ="/index.php/Management/redownload">
+<form name ="redownload" method="post" action ="/Management/redownload">
     
     <input type="submit">Re-download data</input>
 </form>

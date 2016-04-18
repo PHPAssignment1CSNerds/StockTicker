@@ -1,3 +1,3 @@
 <p>{message} </p>
 
-<a href="/index.php/gameplay">Go back</a>
+<a href="/gameplay">Go back</a>

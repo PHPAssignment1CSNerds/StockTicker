@@ -14,7 +14,7 @@
                 <tbody>
                     {stock_array}
                     <tr>
-                        <td><a href="/index.php/stockhistory/stock/{Code}">{Code}</a></td>
+                        <td><a href="/stockhistory/stock/{Code}">{Code}</a></td>
                         <td>{Value}</td>
                     </tr>
                     {/stock_array}
