@@ -1,14 +1,25 @@
 <?php
 
 if (!defined('BASEPATH'))
-	exit('No direct script access allowed');
+    exit('No direct script access allowed');
 
 // the menu basics (text navbar)
+
 $config['menu_choices'] = array(
-	'menudata' => array(
-		array('name' => 'First', 'link' => '/first'),
-		array('name' => 'Last', 'link' => '/last'),
-	)
+    'menudata' => array(
+        array('name' => 'History', 'link' => '/stockhistory'),
+        array('name' => 'Portfolio', 'link' => '/playerprofile'),
+        array('name' => 'Management', 'link' => '/Management')
+    )
+);
+
+$config['menu_choices2'] = array(
+    'menudata' => array(
+        array('name' => 'History', 'link' => '/stockhistory'),
+        array('name' => 'Portfolio', 'link' => '/playerprofile'),
+        array('name' => 'Management', 'link' => '/Management'),
+        array('name' => 'Gameplay', 'link' => '/gameplay')
+    )
 );
 
 
@@ -26,7 +37,7 @@ $config['menu_choices'] = array(
   | path to your installation.
   |
  */
-$config['base_url'] = '';
+$config['base_url'] = 'http://stock.local:4711/';
 
 /*
   |--------------------------------------------------------------------------
@@ -56,7 +67,7 @@ $config['index_page'] = '';
   | 'ORIG_PATH_INFO'	Uses the ORIG_PATH_INFO
   |
  */
-$config['uri_protocol'] = 'AUTO';
+$config['uri_protocol'] = "AUTO" ;
 
 /*
   |--------------------------------------------------------------------------

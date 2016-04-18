@@ -14,6 +14,7 @@ Class Stock_info extends Application {
     public function __construct() {
         parent::__construct();
         $this->load->model('stock_model');
+        $this->restrict(array(ROLE_USER, ROLE_ADMIN));
     }
 
     public function index() {
@@ -21,7 +22,7 @@ Class Stock_info extends Application {
         //var_dump($this->stock_model->get_stocks());
 
         $this->data['stock_array'] = $this->stock_model->get_stocks();
-        
+
         //return the data in view  
         $this->data['pagebody'] = 'stockview'; // this is the view we want shown
 

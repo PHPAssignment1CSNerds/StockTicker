@@ -14,7 +14,7 @@
                 <tbody>
                     {stock_array}
                     <tr>
-                        <td><a href="/stockhistory/stock/{Code}">{Name}</a></td>
+                        <td><a href="/stockhistory/stock/{Code}">{Code}</a></td>
                         <td>{Value}</td>
                     </tr>
                     {/stock_array}
@@ -39,7 +39,7 @@
                 <tbody>
                     {equity_array}
                     <tr>
-                        <td><a href="/playerprofile/player/{Player}">{Player}</a></td>
+                        <td><a href="/index.php/playerprofile/player/{Player}">{Player}</a></td>
                         <td>{Cash}</td>
                         <td>{Equity}</td>
                     </tr>
@@ -48,5 +48,18 @@
             </table>
             <!--end of table-->
         </div>
-    </div>             
+    </div>
+    <div>
+        {recent_moves_array}
+        <p>{Seq}, {Datetime},{Code}, {Action}, {Amount}</p>
+        {/recent_moves_array}
+    </div>
+    
+    <div>
+        {recent_transactions}
+        <p>{Seq} {Datetime} {agent} {Player} {Stock} {Trans} {Quantity}</p>
+        {/recent_transactions}
+    </div>
+    {role}
+    
 </div> 

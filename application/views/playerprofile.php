@@ -6,7 +6,7 @@
         <label for="email">&nbsp;&nbsp; Player:</label> &nbsp;&nbsp;
         <select name="player" class="form-control" id="sel1">
             {player_array}
-            <option value="{Player}" type="submit">{Player}</option>
+            <option value="{player}" type="submit">{player}</option>
             {/player_array}
         </select>
     </div> &nbsp;&nbsp;
